@@ -594,6 +594,10 @@ section {
   }
 }
 
+.mobile-advantages {
+  display: none;
+}
+
 @media screen and (max-width: 1310px) {
   .price-section__slider {
     .tns-controls {
@@ -714,8 +718,18 @@ section {
     background-position: center;
 
     &__block {
-      justify-content: center;
+      justify-content: left;
+      text-align: left;
+      font-size: 20px;
+
+      &-left {
+        display: none;
+      }
     }
+  }
+
+  .mobile-advantages {
+    display: block;
   }
 
   .adress-section__contacts {

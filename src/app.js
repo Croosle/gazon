@@ -8,7 +8,14 @@ const info_slider = tns({
   gutter: 30,
   autoplayButtonOutput: false,
   nav: false,
-  controlsText: ['', '']
+  touch: true,
+  controlsText: ['', ''],
+  controls: false,
+  responsive: {
+    767: {
+      controls: true
+    }
+  }
 });
 
 const price_slider = tns({
@@ -20,8 +27,14 @@ const price_slider = tns({
   autoplayButtonOutput: false,
   nav: true,
   navPosition: 'bottom',
-  controls: true,
-  controlsText: ['', '']
+  controls: false,
+  touch: true,
+  controlsText: ['', ''],
+  responsive: {
+    767: {
+      controls: true
+    }
+  }
 });
 
 (function() {
