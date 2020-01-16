@@ -24,7 +24,7 @@
               <a class="navbar-list__item navbar-list__item-phone" href="tel:88000000000">
                 <img src="svg/call.svg" width="18"/>8 800 000 00 00
               </a>
-              <a class="navbar-list__item navbar-list__item-callback">Заказать звонок</a>
+              <button type="button" class="popup-trigger navbar-list__item navbar-list__item-callback" data-popup-trigger="two">Заказать звонок</button>
             </nav>
           </div>
         </div>
@@ -214,7 +214,7 @@
           <a class="navbar-list__item navbar-list__item-phone" href="tel:88000000000">
             <img src="svg/call.svg" width="18"/>8 800 000 00 00
           </a>
-          <a class="navbar-list__item navbar-list__item-callback">Заказать звонок</a>
+          <button type="button" class="popup-trigger navbar-list__item navbar-list__item-callback" data-popup-trigger="two">Заказать звонок</button>
         </nav>
         <div class="row">
           <div class="col-md-6">
@@ -222,12 +222,32 @@
           </div>
           <div class="col-md-6">
             <div class="adress-section__policy">
-              <a href="#">Политика конфиденциальности</a>
+              <button type="button" class="popup-trigger" data-popup-trigger="one">Политика конфиденциальности</button>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <div class="body-blackout"></div>
+    <div class="popup-modal shadow" data-popup-modal="one">
+      <i class="popup-modal__close"><img src="svg/close.svg" width="12"/></i>
+      <p class="mb-5">Политика конфиденциальности</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla finibus purus eget tincidunt posuere. Nullam tincidunt leo a nisi eleifend aliquam. Curabitur sed commodo velit, nec malesuada nunc. Nam sit amet ligula sed leo fermentum posuere et eu lacus. Maecenas sed odio sapien. Etiam mattis neque nulla, blandit semper neque faucibus eu. Pellentesque sagittis varius magna, elementum consequat leo porta sit amet. Nunc pellentesque enim vitae tincidunt gravida. Vestibulum sed vulputate nisi. Maecenas ac ultricies dolor. Phasellus pellentesque, nisl ac ullamcorper pharetra, sapien massa blandit quam, id viverra lectus urna quis orci. Etiam posuere urna eu feugiat commodo.</p>
+    </div>
+    <div class="popup-modal popup-modal__order shadow" data-popup-modal="two">
+      <i class="popup-modal__close"><img src="svg/close.svg" width="12"/></i>
+      <form method="post" class="form__callback-form">
+        <input type="text" name="name" class="form-input mb-10" value="" placeholder="Ваше имя" required>
+        <input type="text" name="phone" class="form-input mb-10" value="" placeholder="Ваш телефон" required>
+        <input type="email" name="email" class="form-input mb-10" value="" placeholder="Ваш e-mail" required>
+        <button type="submit" class="btn-submit mb-10">Заказать</button>
+        <label for="private" class="form-checkout">
+          <input type="checkbox" id="private" name="private" value="" required>
+          <span class="checkmark"></span>
+          Нажимая кнопку заказать, я даю согласие на обработку персональных данных
+        </label>
+      </form>
+    </div>
     <script src="dist/app.js" charset="utf-8"></script>
   </body>
 </html>
